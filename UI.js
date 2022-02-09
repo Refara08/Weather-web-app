@@ -103,7 +103,7 @@ class UI {
     )}°C`;
     this.icon.setAttribute(
       "src",
-      `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
+      `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
     );
     this.desc.textContent = weather.weather[0].description;
     this.maxTemp.textContent = `Max-Temperature: ${Math.floor(
