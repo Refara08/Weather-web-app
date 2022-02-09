@@ -18,7 +18,8 @@ const searchInput = document.getElementById("search-input"),
   searchBtn = document.getElementById("search-btn"),
   searchResultUl = document.getElementById("search-result-lists"),
   searchGroup = document.getElementById("search-group"),
-  searchResults = document.getElementById("search-results");
+  searchResults = document.getElementById("search-results"),
+  paragrafManyLists = document.getElementById("many-lists");
 
 // ALL EVENTLISTENER ================================================
 //locate current position using navigator geolocation
@@ -66,9 +67,13 @@ async function doSearch() {
   const weatherGeo = await weather.getGeo(searchInputText);
 
   if (weatherGeo.geo.length !== 0) {
+    //display none to paragraf for .many-items
+    paragrafManyLists.style.display = "block";
     //using response and input text to ui method showSearchResultLists
     ui.showSearchResultLists(weatherGeo.geo, searchInputText);
   } else {
+    //display none to paragraf for .many-items
+    paragrafManyLists.style.display = "none";
     //show no results
     ui.showNoResults(searchInputText);
   }
@@ -97,9 +102,12 @@ async function doLocate(e) {
         weatherGeo.geo[getAttrVal].name
       );
 
-      const imgURL = getBgIMG.IMG.urls.regular;
-      const author = getBgIMG.IMG.user.name;
-      const authorURL = getBgIMG.IMG.user.links.html;
+      const imgURL =
+        getBgIMG.IMG.results[Math.floor(Math.random() * 10)].urls.regular;
+      const author =
+        getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.name;
+      const authorURL =
+        getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.links.html;
 
       ui.updateBgIMG(imgURL, author, authorURL);
 
@@ -116,9 +124,12 @@ async function doLocate(e) {
         weatherGeo.geo[getAttrVal].state
       );
 
-      const imgURL = getBgIMG.IMG.urls.regular;
-      const author = getBgIMG.IMG.user.name;
-      const authorURL = getBgIMG.IMG.user.links.html;
+      const imgURL =
+        getBgIMG.IMG.results[Math.floor(Math.random() * 10)].urls.regular;
+      const author =
+        getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.name;
+      const authorURL =
+        getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.links.html;
 
       ui.updateBgIMG(imgURL, author, authorURL);
 
@@ -144,9 +155,12 @@ async function locateSelf(pos) {
   try {
     const getBgIMG = await unsplash.getRandomIMG(weatherGeoRev.geo[0].name);
 
-    const imgURL = getBgIMG.IMG.urls.regular;
-    const author = getBgIMG.IMG.user.name;
-    const authorURL = getBgIMG.IMG.user.links.html;
+    const imgURL =
+      getBgIMG.IMG.results[Math.floor(Math.random() * 10)].urls.regular;
+    const author =
+      getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.name;
+    const authorURL =
+      getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.links.html;
 
     ui.updateBgIMG(imgURL, author, authorURL);
 
@@ -159,9 +173,12 @@ async function locateSelf(pos) {
   } catch (e) {
     const getBgIMG = await unsplash.getRandomIMG(weatherGeoRev.geo[0].state);
 
-    const imgURL = getBgIMG.IMG.urls.regular;
-    const author = getBgIMG.IMG.user.name;
-    const authorURL = getBgIMG.IMG.user.links.html;
+    const imgURL =
+      getBgIMG.IMG.results[Math.floor(Math.random() * 10)].urls.regular;
+    const author =
+      getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.name;
+    const authorURL =
+      getBgIMG.IMG.results[Math.floor(Math.random() * 10)].user.links.html;
 
     ui.updateBgIMG(imgURL, author, authorURL);
 

@@ -128,6 +128,16 @@ Weather Card
   cursor: pointer;
 }
 
+#many-lists {
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.lat-item,
+.lon-item {
+  font-size: 0.8rem;
+}
+
 /* MAIN DISPLAY DATA ===============================*/
 
 .weather {
