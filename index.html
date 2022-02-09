@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a83c7b3631.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for location... "
+        />
+        <button type="submit" id="search-btn">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            height="1.5em"
+            width="1.5em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="white"
+              d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="search-group">
+        <div id="search-results">
+          <h2>Results on: "<span id="search-text">Bandung</span>"</h2>
+          <div id="search-result-lists"></div>
+        </div>
+      </div>
+      <div class="weather">
+        <div class="location">
+          <h1 class="city">Weather in Bandung</h1>
+          <p class="details">
+            <span class="region">West Java</span>,
+            <span class="country">Indonesia</span>
+          </p>
+        </div>
+        <div class="info-1">
+          <div>
+            <p class="temp">26°C</p>
+            <p class="temp-like">feels like 16°C</p>
+          </div>
+          <div>
+            <div id="icon">
+              <img
+                id="wicon"
+                src="http://openweathermap.org/img/w/03d.png"
+                alt="Weather icon"
+              />
+            </div>
+            <p class="description">scattered clouds: 25-50%</p>
+          </div>
+        </div>
+        <div class="info-2">
+          <div class="max-temp">Max-temperature: 26°C</div>
+          <div class="wind-speed">Wind speed: 20 m/s</div>
+          <div class="min-temp">Min-temperature: 16°C</div>
+          <div class="wind-dir">Wind direction: 107.35°</div>
+          <div class="pressure">Pressure: 1010 hPa</div>
+          <div class="humidity">Humidity: 80%</div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-img-author">
+      <p>
+        Photo by
+        <a
+          href="https://unsplash.com/@rifqialiridho"
+          target="_blank"
+          id="author"
+          >Rifqi Ali Ridho</a
+        >
+        on
+        <a href="https://unsplash.com" target="_blank">Unsplash</a>
+      </p>
+    </footer>
+
+    <script src="./unsplash.js"></script>
+    <script src="./weather.js"></script>
+    <script src="./UI.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
