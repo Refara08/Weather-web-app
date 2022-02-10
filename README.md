@@ -9,7 +9,7 @@ Thank you for visiting this repo. I hope you like it!.
 ## Screenshot
 
 ![](./img/screenshot/web-preview.png)
-![](./img/screenshot/mobile-preview.jpg)
+<img src="./img/screenshot/mobile-preview.jpg" width="350">
 
 ## Author
 
