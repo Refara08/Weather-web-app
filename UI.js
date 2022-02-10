@@ -32,26 +32,30 @@ class UI {
       if (list.state === undefined) {
         output += `
           <div id="search-result-item" num="${index}">
-            <span class="city-item">${list.name}</span>,
-            <span class="country-item">${regionNamesInEnglish.of(
-              list.country
-            )}</span>
-            <br>
-            <span class="lat-item">Lat: ${list.lat}</span>,
-            <span class="lon-item">Lon: ${list.lon}</span>
+            <div>
+              <span class="city-item">${list.name}</span>,
+              <span class="country-item">${regionNamesInEnglish.of(
+                list.country
+              )}</span>
+              <br>
+              <span class="lat-item">Lat: ${list.lat}</span>,
+              <span class="lon-item">Lon: ${list.lon}</span>
+            </div>
           </div>
         `;
       } else {
         output += `
           <div id="search-result-item" num="${index}">
-            <span class="city-item">${list.name}</span>,
-            <span class="state-item">${list.state}</span>,
-            <span class="country-item">${regionNamesInEnglish.of(
-              list.country
-            )}</span>
-            <br>
-            <span class="lat-item">Lat: ${list.lat}</span>,
-            <span class="lon-item">Lon: ${list.lon}</span>
+            <div>
+              <span class="city-item">${list.name}</span>,
+              <span class="state-item">${list.state}</span>,
+              <span class="country-item">${regionNamesInEnglish.of(
+                list.country
+              )}</span>
+              <br>
+              <span class="lat-item">Lat: ${list.lat}</span>,
+              <span class="lon-item">Lon: ${list.lon}</span>
+            </div>
           </div>
         `;
       }
